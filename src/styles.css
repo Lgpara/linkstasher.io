@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--text);
+}
+:root {
+  --text: #e3e9ed;
+  --background: #101519;
+  --primary: #4f5378;
+  --secondary: #0c0a0f;
+  --accent: #6d5b8b;
+  --border: #e3e9ed46;
+}
+body {
+    background-color: var(--background);
+}
+main {
+    width: 60%;
+    margin: auto;
+    min-width: 1000px;
+}
