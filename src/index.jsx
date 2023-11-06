@@ -4,17 +4,21 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Header from "./components/header/Header";
 import "./styles.css"
 
 
+import Header from "./components/header/Header";
+import Home from "./page/home/Home";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: 
     (
-      <Header />
+      <>
+        <Header />
+        <Home />
+      </>
     ),
   },
   {

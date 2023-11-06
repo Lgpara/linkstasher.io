@@ -1,0 +1,7 @@
+main .folder {
+  width: 100%;
+  height: 150px;
+  border-left: solid 1px var(--border);
+  border-bottom: solid 1px var(--border);
+  border-right: solid 1px var(--border);
+}/*# sourceMappingURL=home.css.map */

@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import "./header.css"
 
 export default function Header() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -10,11 +11,11 @@ export default function Header() {
       <div className="interface">
         {loggedIn ? (
           <>
-            <p className="logOut">Log Out</p>
+            <p className="logTxt">Log Out</p>
             <i class="fa-solid fa-user"></i>
           </>
         ) : (
-          <Link to="/log-in" className="logIn">
+          <Link to="/log-in" className="logTxt">
             Log-In
           </Link>
         )}

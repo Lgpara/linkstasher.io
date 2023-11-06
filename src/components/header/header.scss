@@ -1,0 +1,16 @@
+header {
+    padding: 20px 10px;
+    border-bottom: solid 1px var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .headTitle {
+        font-style: italic;
+        text-transform: uppercase;
+    }
+    .interface {
+        .logTxt {
+            margin: 0 20px 0 0;
+        }
+    }
+}

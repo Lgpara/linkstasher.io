@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--text);
+  font-family: 'Roboto', sans-serif;
 }
 :root {
   --text: #e3e9ed;
@@ -19,4 +20,18 @@ main {
     width: 60%;
     margin: auto;
     min-width: 1000px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Rubik', sans-serif;
+}
+h1 {
+    font-size: 30px;
+    font-weight: 900;
 }
