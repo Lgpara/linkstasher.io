@@ -1,10 +1,70 @@
 main {
     .folder {
-        width: 100%;
+        width: fit-content;
         height: 150px;
-        // margin: 1px 0;
+        margin: auto;
         border-left: solid 1px var(--border);
         border-bottom: solid 1px var(--border);
         border-right: solid 1px var(--border);
+        transition: all 0.15s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            background-color: var(--text);
+            * {
+                color: var(--background);
+            }
+            .fa-plus {
+                border-right: 1px solid var(--background);
+            }
+        }
+    }
+    .createFolder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .fa-plus {
+            font-size: 100px;
+            height: 150px;
+            padding: 25px;
+            border-right: 1px solid var(--border);
+            // border-left: 1px solid var(--border);
+            transition: all 0.15s ease-in-out;
+        }
+        h2 {
+            font-size: 50px;
+            padding: 45px 25px;
+            height: 100%;
+            transition: all 0.15s ease-in-out;
+        }
+
+    }
+}
+.modalContent {
+    background-color: var(--background);
+    padding: 10px;
+    width: 450px;
+    .modalHead {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    .modalForm {
+        .formItemContainer {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2px;
+            .formLabel {
+                padding: 2px;
+            }
+        }
+        .formSubmitBtn { 
+            border: 1px solid var(--border);
+            background-color: var(--background);
+            color: var(--text);
+            padding: 5px;
+            font-size: 26px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
     }
 }
