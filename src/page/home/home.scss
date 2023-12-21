@@ -1,13 +1,41 @@
 main {
     .folder {
-        width: fit-content;
+        width: 80%;
+        min-width: 600px;
         height: 150px;
         margin: auto;
         border-left: solid 1px var(--border);
         border-bottom: solid 1px var(--border);
         border-right: solid 1px var(--border);
         transition: all 0.15s ease-in-out;
+        display: flex;
         cursor: pointer;
+        .fa-solid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 100px;
+            height: 100%;
+            width: 150px;
+            border-right: 1px solid var(--border);
+            transition: all 0.15s ease-in-out;
+        }
+        .textContent {
+            flex-grow: 1;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            
+            h2 {
+                font-size: 50px;
+                margin: -6px 0 8px 0;
+            }
+            p {
+    
+            }
+
+        }
         &:hover {
             background-color: var(--text);
             * {
@@ -19,18 +47,12 @@ main {
         }
     }
     .createFolder {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .fa-plus {
-            font-size: 100px;
-            height: 150px;
-            padding: 25px;
-            border-right: 1px solid var(--border);
-            // border-left: 1px solid var(--border);
-            transition: all 0.15s ease-in-out;
-        }
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
         h2 {
+            text-align: center;
+            flex-grow: 1;
             font-size: 50px;
             padding: 45px 25px;
             height: 100%;

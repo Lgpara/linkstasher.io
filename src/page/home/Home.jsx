@@ -2,6 +2,7 @@ import "./home.css";
 import React from "react";
 import ReactDOM from "react-dom";
 import Modal from "react-modal";
+import folderData from "../../appdata/folderData.json";
 
 const customStyles = {
   content: {
@@ -24,7 +25,7 @@ export default function Home() {
   }
 
   function afterOpenModal() {
-    console.log("hello")
+    console.log("hello");
   }
 
   function closeModal() {
@@ -33,7 +34,7 @@ export default function Home() {
   return (
     <main>
       <div onClick={openModal} className="folder createFolder">
-        <i className="fa-solid fa-plus"></i>
+        <i class="fa-solid fa-folder-plus"></i>
         <h2>Create folder</h2>
       </div>
       <Modal
@@ -44,25 +45,42 @@ export default function Home() {
         contentLabel="Example Modal"
       >
         <div className="modalContent">
-            <div className="modalHead">
-                <h2 className="modalTitle">Folder infos</h2>
-                <i class="fa-solid fa-xmark" onClick={closeModal}></i>
+          <div className="modalHead">
+            <h2 className="modalTitle">Folder infos</h2>
+            <i class="fa-solid fa-xmark" onClick={closeModal}></i>
+          </div>
+          <form className="modalForm">
+            <div className="formItemContainer">
+              <label className="formLabel" for="name">
+                Name:
+              </label>
+              <input type="text" id="name" name="name" required />
             </div>
-            <form className="modalForm">
-                <div className="formItemContainer">
-                    <label className="formLabel" for="name">Name:</label>
-                    <input type="text" id="name" name="name" required />
-                </div>
-                <div className="formItemContainer">
-                    <label className="formLabel" for="description">Description:</label>
-                    <textarea id="description" name="description" rows="4" cols="50" required />
-                </div>
-                <button className="formSubmitBtn">CONFIRM</button>
-            </form>
+            <div className="formItemContainer">
+              <label className="formLabel" for="description">
+                Description:
+              </label>
+              <textarea
+                id="description"
+                name="description"
+                rows="4"
+                cols="50"
+                required
+              />
+            </div>
+            <button className="formSubmitBtn">CONFIRM</button>
+          </form>
         </div>
       </Modal>
-      {/* <div className="folder"></div>
-            <div className="folder"></div> */}
+      {folderData.map((folder, index) => (
+        <div className="folder" key={index}>
+          <i style={{color: folder.iconColor}} className={"fa-solid " + folder.icon}></i>
+          <div className="textContent">
+            <h2 className="title">{folder.title}</h2>
+            <p className="description">{folder.description}</p>
+          </div>
+        </div>
+      ))}
     </main>
   );
 }

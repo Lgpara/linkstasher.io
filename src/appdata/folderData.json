@@ -1,0 +1,26 @@
+[
+    {
+        "title": "News articles",
+        "description": "Interresting news articles",
+        "icon" : "fa-folder",
+        "iconColor": "#ffadad"
+    },
+    {
+        "title": "Films",
+        "description": "Good films to see later",
+        "icon" : "fa-folder",
+        "iconColor": "#ffd6a5"
+    },
+    {
+        "title": "Shopping list",
+        "description": "What i want to purchase",
+        "icon" : "fa-folder",
+        "iconColor": "#fdffb6"
+    },
+    {
+        "title": "Funny vidéos",
+        "description": "The best and worst of internet",
+        "icon" : "fa-folder",
+        "iconColor": "#9bf6ff"
+    }
+]

@@ -9,6 +9,7 @@ import "./styles.css"
 
 import Header from "./components/header/Header";
 import Home from "./page/home/Home";
+import LogIn from "./page/log-in/LogIn";
 
 const router = createBrowserRouter([
   {
@@ -23,7 +24,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/log-in",
-    element: <div>Hello world!</div>,
+    element: (
+      <>
+        <Header />
+        <LogIn />
+      </>
+    ),
   },
   {
     path: "/sign-up",
